@@ -1,0 +1,17 @@
+{% extends "templates/base.html" %}
+
+{% block title %}
+<title>{{ post.title }}</title>
+{% endblock %}
+
+{% block content %}
+<article class='post-detail'>
+    <h1>{{ post.title }}</h1>
+    {% if post.thumbnail %}
+    <img src="{{ post.thumbnail.url }}" alt="L'image de" style="width: 300px;">
+    {% endif %}
+    <div style="margin-top: 2rem; font-family: 'Raleway', sans-serif; font-size: 16px; line-height: 1.6; text-align: justify;">
+        {{ post.content|safe }}
+    </div>
+</article>
+{% endblock  %}

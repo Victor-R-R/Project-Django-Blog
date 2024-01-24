@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %} {% endblock %}
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+  </head>
+  <body>
+    <nav>
+      <button class="btn btn-title"><a href="{% url 'posts:home' %}">Accueil</a></button>
+      {% if request.user.is_authenticated %}
+      <button class="btn btn-title"><a href="{% url 'posts:create' %}">Ajouter un article</a></button>
+      {% endif %}
+    </nav>
+      
+    <section id="blog">{% block content %} {% endblock %}</section>
+  </body>
+</html>

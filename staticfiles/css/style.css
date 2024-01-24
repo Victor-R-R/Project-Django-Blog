@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import "reset.css";
+
+body {
+    background-color: mintcream;
+    font-family: 'Raleway', sans-serif;
+}
+
+nav {
+    margin: auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#blog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+@media (max-width: 1924px) {
+    #blog article {
+        width: 85%;
+    }
+}
+
+.post-title {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.post-title a {
+    color: steelblue;
+    text-decoration: none;
+    margin-left: .5rem;
+}
+
+.post-title a:last-child {
+    color: red;
+}
+
+.post-title>div {
+    margin-left: auto;
+}
+
+.post-author {
+    margin: .5rem 0;
+}
+
+.post-excerpt {
+    margin-bottom: .5rem;
+}
+
+.post-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-detail>h1 {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+input,
+textarea {
+    display: block;
+    padding: .75rem;
+    line-height: 1.5;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    min-width: 600 px;
+}
+
+label {
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 1rem 0;
+}
+
+.btn {
+    padding: 15px 32px;
+    border: none;
+    text-align: center;
+    font-weight: 300;
+    font-size: 17px;
+    border-radius: .4rem;
+    color: white;
+    width: 35%;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.btn-submit {
+    background-color: steelblue;
+    width: 25%;
+}
+
+.btn-delete {
+    background-color: indianred;
+}
+
+.btn-title {
+    background-color: rgb(239, 163, 239);
+    font-size: 16px;
+    width: 15%;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-title a {
+    color: white;
+    /* Cambia al color que prefieras para el texto */
+    text-decoration: none;
+    /* Quitar el subrayado */
+}
+
+/* Opcional: Estilo adicional para cuando el enlace está en estado de hover */
+.btn-title a:hover {
+    text-decoration: underline;
+    /* Puedes cambiar a otros estilos si lo prefieres */
+}
